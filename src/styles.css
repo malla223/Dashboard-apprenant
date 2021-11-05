@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+#btn-space{
+    margin-right: 10px;
+    background: orange;
+}
+
+#titre{
+    color: rgb(243, 160, 6);
+}
+.tableau{
+    margin-top: 60px;
+}

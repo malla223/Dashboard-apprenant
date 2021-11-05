@@ -1,0 +1,46 @@
+<div class="card" id="inscri">
+    <div class="container">
+        <div class="card-header">
+            <h1>Modification</h1>
+          </div>
+        <div class="card-body">
+            <img src="/assets/images/connexion.png" alt="" class="img">
+          
+                <div class="md-3">
+                  <form (ngSubmit)="onSubmit()" >
+                    <label for="exampleFormControlInput1" class="form-label">Prénom</label>
+                    <input [(ngModel)]="apprenant.prenom"
+                    name="prenom" type="text" class="form-control" required>
+                  
+                    <label for="exampleFormControlInput1" class="form-label">Nom</label>
+                    <input [(ngModel)]="apprenant.nom"
+                    name="nom" type="text" class="form-control" required>
+        
+                    <label for="exampleFormControlInput1" class="form-label">Téléphone</label>
+                    <input [(ngModel)]="apprenant.tel"
+                    name="tel" type="text" class="form-control" required>
+        
+                    <label for="exampleFormControlInput1" class="form-label">Genre</label>
+                    <input [(ngModel)]="apprenant.genre"
+                    name="genre" type="email" class="form-control" required>
+        
+                    <label for="exampleFormControlInput1" class="form-label">Login</label>
+                    <input [(ngModel)]="apprenant.email"
+                    name="email" type="email" class="form-control" required>
+        
+                    <label for="exampleFormControlInput1" class="form-label">Password</label>
+                    <input [(ngModel)]="apprenant.password"
+                    name="password" type="password" class="form-control" required >
+
+                    <div class="btn">
+                      <button type="submit" class="btn" id="valider">Enregistrer</button>
+                    </div>
+                  </form>
+              </div>
+          
+        </div>
+    </div>
+    
+  
+</div>
+

@@ -1,0 +1,46 @@
+<div class="card" id="inscri">
+    <div class="container">
+        <div class="card-header">
+            <h1>Inscription</h1>
+          </div>
+        <div class="card-body">
+            <img src="/assets/images/connexion.png" alt="" class="img">
+          
+                <div class="md-3">
+                  <form (ngSubmit)="save()" >
+                    <label for="exampleFormControlInput1" class="form-label">Prénom</label>
+                    <input [(ngModel)]="formateur.prenom_f"
+                    name="prenom_f" type="text" class="form-control" required>
+                  
+                    <label for="exampleFormControlInput1" class="form-label">Nom</label>
+                    <input [(ngModel)]="formateur.nom_f"
+                    name="nom_f" type="text" class="form-control" required>
+        
+                    <label for="exampleFormControlInput1" class="form-label">Téléphone</label>
+                    <input [(ngModel)]="formateur.tel_f"
+                    name="tel_f" type="text" class="form-control" required>
+        
+                    <label for="exampleFormControlInput1" class="form-label">Genre</label>
+                    <input [(ngModel)]="formateur.genre_f"
+                    name="genre_f" type="email" class="form-control" required>
+        
+                    <label for="exampleFormControlInput1" class="form-label">Login</label>
+                    <input [(ngModel)]="formateur.email_f"
+                    name="email_f" type="email" class="form-control" required>
+        
+                    <label for="exampleFormControlInput1" class="form-label">Password</label>
+                    <input [(ngModel)]="formateur.password_f"
+                    name="password_f" type="password" class="form-control" required >
+
+                    <div class="btn">
+                      <button type="submit" class="btn" id="valider">Enregistrer</button>
+                    </div>
+                  </form>
+              </div>
+          
+        </div>
+    </div>
+    
+  
+</div>
+
