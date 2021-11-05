@@ -227,7 +227,7 @@
 											"top": 54,
 											"width": 148,
 											"height": 13,
-											"text": "Ajouter formateur"
+											"text": "Ajouter apprenant"
 										},
 										{
 											"_type": "LabelView",
@@ -417,7 +417,7 @@
 											"top": 155.5,
 											"width": 137,
 											"height": 13,
-											"text": "modifier formateur"
+											"text": "modifier apprenant"
 										},
 										{
 											"_type": "LabelView",
@@ -601,7 +601,7 @@
 											"top": 274,
 											"width": 130,
 											"height": 13,
-											"text": "supprimer formateur"
+											"text": "supprimer apprenant"
 										},
 										{
 											"_type": "LabelView",
@@ -632,7 +632,7 @@
 									"font": "Arial;13;0",
 									"left": 341,
 									"top": 267,
-									"width": 140,
+									"width": 140.025390625,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF84aewh1KxLYM="
@@ -791,7 +791,7 @@
 											"top": 406,
 											"width": 154,
 											"height": 13,
-											"text": "lister formateur"
+											"text": "lister apprenant"
 										},
 										{
 											"_type": "LabelView",
@@ -2698,7 +2698,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Ajouter formateur",
+					"name": "Ajouter apprenant",
 					"ownedElements": [
 						{
 							"_type": "UMLInclude",
@@ -2721,7 +2721,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "modifier formateur",
+					"name": "modifier apprenant",
 					"ownedElements": [
 						{
 							"_type": "UMLInclude",
@@ -2744,7 +2744,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "supprimer formateur",
+					"name": "supprimer apprenant",
 					"ownedElements": [
 						{
 							"_type": "UMLInclude",
@@ -2767,7 +2767,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "lister formateur",
+					"name": "lister apprenant",
 					"ownedElements": [
 						{
 							"_type": "UMLInclude",
