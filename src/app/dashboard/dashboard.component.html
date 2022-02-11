@@ -4,7 +4,7 @@
         <div class="container-fluid">
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <form class="d-flex">
-              <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+              <input [(ngModel)]="searchString" class="form-control" type="search" placeholder="Search" aria-label="Search">
             </form>
           </div>
           <ul class="navbar-nav">
@@ -15,34 +15,33 @@
         </div>
       </nav>
       <div class="tableau"> 
-        <h1>La liste des aprrenants</h1>
-        <table class="table">
+        <h1 class="h1">La liste des aprrenants</h1>
+        <table class="table table-striped table-hover">
           <thead>
             <tr>
-              <th>Prénom</th>
-              <th>Nom</th>
-              <th>Téléphone</th>
-              <th>Modifier</th>
-              <th>Supprimer</th>
-              <th>Detail</th>
+              <th><h2>Prénom</h2></th>
+              <th><h2>Nom</h2></th>
+              <th><h2>Téléphone</h2></th>
+              <th><h2>Actions</h2></th>
+              <th><h2>Présence</h2></th>
             </tr>
-            <tr *ngFor = "let a of apprenant" >
+            <tr *ngFor = "let a of apprenant | filter: searchString " >
               <th>{{ a.nom }}</th>
               <th>{{ a.prenom }}</th>
               <th>{{ a.tel }}</th>
               <th>
                 <button  (click) = "updateApprenant(a.id, a)" class = "btn btn-primary"> Update</button>
-              </th>
-              <th>
                 <button (click)="deleteApprenant(a.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click)="apprenantDetails(a.id)" class = "btn btn-primary" style="margin-left: 10px"> View</button>
               </th>
               <th>
-                <button  class = "btn btn-primary" style="margin-left: 10px"> View</button>
+                <div class="form-check form-switch" >
+                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                  <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                </div>
               </th>
             </tr>
           </thead>
-          <tbody>
-          </tbody>
         </table>
       </div> 
     </div>
@@ -60,22 +59,21 @@
         </div>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a  class="btn" id="btn-space" href="inscription">Ajouter un formateur</a>
+            <a  class="btn" id="btn-space" href="insri-forma">Ajouter un formateur</a>
           </li>
         </ul>
       </div>
     </nav>
     <div class="tableau"> 
-      <h1>La liste des formateurs</h1>
-      <table class="table">
+      <h1 class="h1">La liste des formateurs</h1>
+      <table class="table table-striped table-hover">
         <thead>
           <tr>
-            <th>Prénom</th>
-            <th>Nom</th>
-            <th>Téléphone</th>
-            <th>Modifier</th>
-            <th>Supprimer</th>
-            <th>Detail</th>
+            <th><h2>Prénom</h2></th>
+            <th><h2>Nom</h2></th>
+            <th><h2>Téléphone</h2></th>
+            <th><h2>Actions</h2></th>
+            
              
           </tr>
           <tr *ngFor = "let f of formateur" >
@@ -84,13 +82,10 @@
             <th>{{ f.tel_f }}</th>
             <th>
               <button (click)="updateForma(f.id_f, f)" class = "btn btn-primary"> Update</button>
-            </th>
-            <th>
               <button (click)="deleteForma(f.id_f)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+              <button (click)="formaDetails(f.id_f)" class = "btn btn-primary" style="margin-left: 10px"> View</button>
             </th>
-            <th>
-              <button  class = "btn btn-primary" style="margin-left: 10px"> View</button>
-            </th>
+            
           </tr>
         </thead>
         <tbody>
@@ -99,3 +94,4 @@
     </div> 
   </div>
 </div>
+<router-outlet></router-outlet>

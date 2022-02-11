@@ -8,7 +8,7 @@ import { Formateur } from '../formateur';
 })
 export class FormatteurService {
 
-  private baseurl = "http://localhost:8080/apis/formateur";
+  private baseurl = "http://localhost:8080/api/formateur";
 
   constructor(private httpClient: HttpClient) { }
 
@@ -17,16 +17,16 @@ export class FormatteurService {
   }
   
 
-  create_F(f: Formateur): Observable<Object>{
-    return this.httpClient.post(`${this.baseurl}`, f);
+  create_F(formateur: Formateur): Observable<Object>{
+    return this.httpClient.post(`${this.baseurl}`, formateur);
   }
 
   get_FById(id: any): Observable<Formateur>{
     return this.httpClient.get<Formateur>(`${this.baseurl}/${id}`);
   }
 
-  updateF(id: any, f: Formateur): Observable<Object>{
-    return this.httpClient.put(`${this.baseurl}/${id}`, f);
+  updateF(id: any, formateur: Formateur): Observable<Object>{
+    return this.httpClient.put(`${this.baseurl}/${id}`, formateur);
   }
 
   deleteF(id: any): Observable<Object>{

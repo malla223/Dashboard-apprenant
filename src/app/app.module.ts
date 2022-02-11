@@ -15,24 +15,32 @@ import { PresenceSemaineComponent } from './presence-semaine/presence-semaine.co
 import { ProfilComponent } from './profil/profil.component';
 import { UpdateApprenantComponent } from './update-apprenant/update-apprenant.component';
 import { InscriFormateurComponent } from './inscri-formateur/inscri-formateur.component';
+import { DetailApprenantComponent } from './detail-apprenant/detail-apprenant.component';
+import { UpdateFormateurComponent } from './update-formateur/update-formateur.component';
+import { DetailFormateurComponent } from './detail-formateur/detail-formateur.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InscriptionComponent,
-    
+    InscriptionComponent, 
     DashboardComponent,
     EditPasswordComponent,
     PresenceJourComponent,
     PresenceMoisComponent,
     PresenceSemaineComponent,
-    
     ProfilComponent,
-         UpdateApprenantComponent,
-         InscriFormateurComponent
+    UpdateApprenantComponent,
+    InscriFormateurComponent,
+    DetailApprenantComponent,
+    UpdateFormateurComponent,
+    DetailFormateurComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
+    Ng2SearchPipeModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,

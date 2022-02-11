@@ -31,6 +31,7 @@ export class UpdateApprenantComponent implements OnInit {
   onSubmit(){
     this.aService.updateApprenant(this.id, this.apprenant).subscribe( data =>{
       console.log(data);
+      this.router.navigate(['dashboard']);
     }
     , error => console.log(error));
   }

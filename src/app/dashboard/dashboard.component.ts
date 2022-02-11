@@ -10,10 +10,12 @@ import { FormatteurService } from '../services/formatteur.service';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
+
 export class DashboardComponent implements OnInit {
 
   apprenant: Apprenant[] = [];
   formateur: Formateur[] = [];
+  searchString: string ='';
 
   constructor
   (public apprenantService: ApprenantService,
@@ -41,13 +43,17 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  //apprenantDetails(id: number){
-    //this.router.navigate(['apprenant-details', id]);
-  //}
+  apprenantDetails(id: any){
+    this.router.navigate(['details', id]);
+  }
 
-  public updateApprenant(id: any, apprenant: Apprenant){
+  formaDetails(id_f: any){
+    this.router.navigate(['detailsf', id_f]);
+  }
+
+   updateApprenant(id: any, apprenant: Apprenant){
    
-      this.router.navigate(['update-apprenant', id]);
+      this.router.navigate(['update', id]);
 
   }
 
@@ -58,11 +64,9 @@ export class DashboardComponent implements OnInit {
     })
   }
 
-  public updateForma(id_f: any, f: Formateur){
-    this.fService.updateF(id_f, f).subscribe(data=>{
-      console.log(data);
-      this.router.navigate(['inscription', id_f]);
-    })
+  updateForma(id_f: any, formateur: Formateur){
+  
+      this.router.navigate(['update-format', id_f]);
 
   }
 

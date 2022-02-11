@@ -1,13 +1,13 @@
 <div class="card" id="inscri">
     <div class="container">
         <div class="card-header">
-            <h1>Inscription de formateur</h1>
+            <h1>Modification Formateur</h1>
           </div>
         <div class="card-body">
             <img src="/assets/images/connexion.png" alt="" class="img">
           
                 <div class="md-3">
-                  <form (ngSubmit)="save()" >
+                  <form (ngSubmit)="onSubmit()" >
                     <label for="exampleFormControlInput1" class="form-label">Prénom</label>
                     <input [(ngModel)]="formateur.prenom_f"
                     name="prenom_f" type="text" class="form-control" required>
@@ -43,4 +43,5 @@
     
   
 </div>
+
 
